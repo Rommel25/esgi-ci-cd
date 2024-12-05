@@ -1,2 +1,6 @@
-FROM ubuntu:22.04 
-RUN apt-get update && apt-get install --yes --no-install-recommends git
+FROM node:23
+WORKDIR /app
+COPY ./package.json /app/
+COPY ./package-lock.json /app/
+RUN npm clean-install
+COPY ./index.js /app/
