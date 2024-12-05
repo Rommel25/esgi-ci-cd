@@ -1,6 +1,11 @@
 name: Bonjour
 on:
-  - push
+  push:
+  pull_request:
+    types:
+      - closed
+
+    
 jobs:
   lint_dockerfile:
     runs-on: ubuntu-latest
