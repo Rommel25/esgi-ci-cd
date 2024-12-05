@@ -2,6 +2,16 @@ name: Bonjour
 on:
   - push
 jobs:
+  lint_dockerfile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Installer Hadolint
+        run: |
+          curl -L "https://github.com/hadolint/hadolint/releases/latest/download/hadolint-$(uname -s)-$(uname -m)" -o /usr/local/bin/hadolint
+          chmod +x /usr/local/bin/hadolint
+      - name: Linter le Dockerfile
+        run: hadolint Dockerfile
+
   dire_bonjour:
     runs-on: ubuntu-22.04
     env:
