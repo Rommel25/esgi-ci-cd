@@ -40,5 +40,5 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           push: true
-          context: ./
+          context: /workspace/esgi-ci-cd/
           tags: "rommel25/cicdpaul:${{ github.ref_name }}"
