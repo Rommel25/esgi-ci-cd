@@ -20,7 +20,7 @@ jobs:
   dire_bonjour:
     runs-on: ubuntu-22.04
     env:
-      IMAGE_NAME: "esgicicd"
+      IMAGE_NAME: "cicdpaul"
     steps:
 
       - uses: actions/checkout@v4 # Récupère le contenu du dépôt correspondant au commit du workflow en cours
